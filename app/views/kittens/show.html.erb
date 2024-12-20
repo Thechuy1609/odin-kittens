@@ -1,0 +1,23 @@
+<%=link_to "Index", kittens_path%><br>
+<div>
+  <h1>Name of this beautiful kitten</h1>
+<h3><%= @kitten.name %></h3>
+</div>
+<div>
+    <h1>Age of this beautiful kitten</h1>
+<h3>  :) <%= @kitten.age %></h3>
+</div>
+<div>
+    <h1>Level of Power!</h1>
+<h3>  :)  <%= @kitten.cuteness %></h3>
+</div>
+<div>
+     <h1>Softness</h1>
+<h3> :) <%= @kitten.softness %></h3>
+</div>
+<h2><%= link_to "Kill it!", kitten_path(@kitten), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></h2>
+                  <br>
+<%=link_to "edit", edit_kitten_path(@kitten.id)%>

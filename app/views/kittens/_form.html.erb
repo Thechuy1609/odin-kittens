@@ -1,0 +1,36 @@
+<%= form_with model: @kitten do |f| %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <% @kitten.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= f.label :age %><br>
+    <%= f.textarea :age %><br>
+    <% @kitten.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+ <div>
+    <%= f.label :cuteness %><br>
+    <%= f.textarea :cuteness %><br>
+    <% @kitten.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= f.label :softness %><br>
+    <%= f.textarea :softness %><br>
+    <% @kitten.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
